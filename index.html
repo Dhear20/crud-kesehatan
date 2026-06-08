@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi CRUD Data Pasien</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Aplikasi CRUD Data Pasien</h2>
+        
+        <form id="patientForm">
+            <input type="hidden" id="patientId">
+            <div class="form-group">
+                <label for="name">Nama Pasien</label>
+                <input type="text" id="name" required placeholder="Masukkan nama pasien">
+            </div>
+            <div class="form-group">
+                <label for="age">Umur</label>
+                <input type="number" id="age" required placeholder="Masukkan umur">
+            </div>
+            <div class="form-group">
+                <label for="diagnosis">Diagnosa</label>
+                <textarea id="diagnosis" required placeholder="Masukkan diagnosa penyakit"></textarea>
+            </div>
+            <button type="submit" id="submitBtn">Simpan Data</button>
+            <button type="button" id="cancelBtn" class="btn-secondary" style="display: none;">Batal</button>
+        </form>
+
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Umur</th>
+                        <th>Diagnosa</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="patientTableBody">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
